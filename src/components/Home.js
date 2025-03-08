@@ -40,7 +40,7 @@ const FileUpload = () => {
         formData.append("file", file);
 
         try {
-            const response = await axios.post("http://localhost:5100/upload", formData, {
+            const response = await axios.post("https://secret-santa-backend-ltaw.onrender.com/upload", formData, {
                 headers: { "Content-Type": "multipart/form-data" },
                 responseType: "blob",
             });
