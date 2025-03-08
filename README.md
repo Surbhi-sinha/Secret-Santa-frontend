@@ -1,70 +1,106 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### **📜 Secret Santa Assignment System** 🎄
 
-In the project directory, you can run:
+A **fun and automated** Secret Santa system that assigns a **unique Secret Child** to each participant while ensuring fairness, preventing duplicates from previous years, and allowing seamless management through a web interface.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## **🚀 Features**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+✅ **Automated Secret Santa Matching** – Ensures each participant gets a unique Secret Child.\
+✅ **Prevents Self-Assignment** – No one is assigned themselves.\
+✅ **No Repeats from Last Year** – Avoids assigning the same person as last year.\
+✅ **CSV Upload & Download** – Easily import participants and export assigned pairs.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## **🛠️ Tech Stack**
 
-### `npm run build`
+### **Frontend** *(React.js – Hosted on Vercel)*
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React with bootstrap for a clean UI
+- Axios for API communication
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### **Backend** *(Node.js with Typescript – Hosted on Render)*
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Express.js for API handling
+- CORS and authentication setup for security
+- CSV-Parser for reading and extracting information from uploaded CSV.
+- CSV-writer for writing CSV from the processed data
+- Uses (Fisher-Yates Algorithm) for shuffling the employees and assignments
+- Multer for file upload support.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## **🛠️ Installation & Setup**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### **1️⃣  Backend Setup**
 
-## Learn More
+```bash
+git clone https://github.com/Surbhi-sinha/Secret-Santa-backend.git
+cd Secret-Santa-backend
+npm install
+npm run build
+npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### **2️⃣ Frontend Setup**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+git clone https://github.com/Surbhi-sinha/Secret-Santa-frontend.git
+cd Secret-Santa-frontend
+npm install
+npm start
+```
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## **🎯 API Endpoints**
 
-### Analyzing the Bundle Size
+| Method | Endpoint  | Description                     |
+| ------ | --------- | ------------------------------- |
+| `POST` | `/upload` | Upload CSV file of participants |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## **🎁 Usage Guide**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1️⃣ **Upload Employee CSV** (with names & emails).\
+2️⃣ **Click "Assign Secret Santa"** – The system generates pairs.\
+3️⃣ **Download the result** – Get a CSV of Secret Santa assignments.\
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## **📸 Gif**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+📌 ![Secret-santa-demo](secret_santa_frontend\src\assets\secret-santa-gif2.gif)
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## **🔐 Security & Privacy**
+
+🔹 **Data Protection** – Emails and names are securely stored.\
+🔹 **CORS & HTTPS** – Ensures secure API communication.
+
+---
+
+## **🚀 Deployment**
+
+Frontend is deployed on **Vercel**: [Live Site](https://secret-santa-frontend-self.vercel.app/)\
+Backend is deployed on **Render**: [API URL](https://secret-santa-backend-ltaw.onrender.com)
+
+---
+
+## **👨‍💻 Contributors**
+
+- **Surbhi Sinha** – [GitHub](https://github.com/Surbhi-sinha)
+
+---
+
+🎄🎁 **Enjoy your hassle-free Secret Santa experience!** 🚀 Let’s spread the holiday cheer! 🎅
+
+---
