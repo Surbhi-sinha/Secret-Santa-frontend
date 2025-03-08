@@ -77,7 +77,7 @@ npm start
 
 ## **📸 Gif**
 
-📌 ![Secret-santa-demo](secret_santa_frontend\src\assets\secret-santa-gif2.gif)
+📌 ![Secret-santa-demo](https://github.com/Surbhi-sinha/Secret-Santa-frontend/blob/main/src/assets/secret-santa-gif2.gif)
 
 ---
 
