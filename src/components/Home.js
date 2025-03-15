@@ -8,6 +8,7 @@ const FileUpload = () => {
     const [fileSize, setFileSize] = useState("");
     const [progress, setProgress] = useState(0);
     const [errorMessage, setErrorMessage] = useState("");
+    const [buttonState, setButtonState] = useState("Generate");
 
     const handleFileChange = (event) => {
         const selectedFile = event.target.files[0];
@@ -17,6 +18,7 @@ const FileUpload = () => {
             setFileSize(() => (selectedFile.size / 1024).toFixed(1) + " KB");
             setProgress(0);
             setErrorMessage("");
+            setButtonState("Generate"); // Reset button state when file changes
         }
     };
 
@@ -26,6 +28,7 @@ const FileUpload = () => {
             setErrorMessage("Please select a file first");
             return;
         }
+        setButtonState("downloading...");
         let width = 0;
         const interval = setInterval(() => {
             if (width >= 100) {
@@ -44,7 +47,7 @@ const FileUpload = () => {
                 headers: { "Content-Type": "multipart/form-data" },
                 responseType: "blob",
             });
-
+            setButtonState("Generate Again");
             const url = window.URL.createObjectURL(new Blob([response.data]));
             const link = document.createElement("a");
             link.href = url;
@@ -135,7 +138,7 @@ const FileUpload = () => {
                             </div>
                             <div className="col-auto">
                                 <button type="button" className="upload-button btn btn-primary" onClick={handleFileUpload}>
-                                    Download
+                                    {buttonState}
                                 </button>
                             </div>
                         </div>
